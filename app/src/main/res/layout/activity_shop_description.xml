@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShopDescription">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_15sdp"
+        app:cardBackgroundColor="#FA8072"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shop description"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/_15ssp"
+                android:id="@+id/shopDescriptionText"/>
+
+            <EditText
+                android:id="@+id/shop_description_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shopDescriptionText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:gravity="center_horizontal"
+                android:inputType="textMultiLine"
+                android:textAlignment="center"
+                android:textCursorDrawable="@color/colorPrimary"
+                android:textSize="@dimen/_15ssp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/save_button"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_below="@id/shop_description_content"
+                app:cardCornerRadius="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                app:cardBackgroundColor="#ffffff">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SAVE DATA"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:textColor="#FA8072"
+                    android:textSize="@dimen/_25ssp"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:gravity="center_horizontal" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/continueButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shop_description_content"
+                android:layout_alignParentRight="true"
+                app:cardBackgroundColor="#ffffff"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:cardCornerRadius="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_10sdp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CONTINUE"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:textAlignment="center"
+                    android:textColor="#FA8072"
+                    android:textSize="@dimen/_25ssp"
+                    android:gravity="center_horizontal" />
+
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

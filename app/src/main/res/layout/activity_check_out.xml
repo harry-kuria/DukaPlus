@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CheckOutActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Checkout Items"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="@dimen/_20sdp"
+        android:textAlignment="center"
+        android:id="@+id/checkout_items_title"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkout_items_title"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_border"
+        android:text="TAP TO CHECK OUT ITEMS"
+        android:onClick="setCheckout_button"
+        android:textColor="#FA8072"
+        android:id="@+id/checkout_items_button"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textAlignment="center"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/host"
+        android:layout_below="@id/checkout_items_button"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_above="@id/sum"
+        android:layout_marginBottom="@dimen/_10sdp">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/checkout_list"
+            android:layout_marginTop="@dimen/_10sdp"/>
+
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+        android:id="@+id/add_item_options_checkout"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="@dimen/_10sdp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:hint="Code"
+                android:id="@+id/code_input_checkout"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:hint="Name of Commodity"
+                android:layout_below="@id/code_input_checkout"
+                android:id="@+id/name_input_checkout"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:hint="Quantity"
+                android:layout_below="@id/name_input_checkout"
+                android:id="@+id/quantity_input_checkout"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:hint="Unit_Price"
+                android:layout_below="@id/quantity_input_checkout"
+                android:id="@+id/unitprice_input_checkout"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:hint="Total_Price_checkout"
+                android:layout_below="@id/unitprice_input_checkout"
+                android:id="@+id/totalprice_input_checkout"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/totalprice_input_checkout"
+                android:text="ADD TO LIST"
+                android:onClick="AddStock"
+                android:id="@+id/add_to_stock_checkout"
+                android:textColor="#FA8072"
+                android:background="@drawable/button_border"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/totalprice_input_checkout"
+                android:text="FINISH"
+                android:layout_alignParentRight="true"
+                android:onClick="FinishAdding"
+                android:id="@+id/scan_again_checkout"
+                android:textColor="#FA8072"
+                android:background="@drawable/button_border"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_border"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:text="F  I  N  I  S  H"
+        android:id="@+id/sum"
+        android:onClick="total"
+        android:textAlignment="center"
+        android:textColor="#FA8072"/>
+    <ImageView
+        android:layout_width="@dimen/_100sdp"
+        android:visibility="gone"
+        android:id="@+id/emptyView_image_checkout"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_above="@id/emptyView_checkout"
+        android:src="@drawable/ic_baseline_hourglass_empty_24"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:text="No Data Available"
+        android:textSize="@dimen/_20sdp"
+        android:textAlignment="center"
+        android:layout_centerInParent="true"
+        android:id="@+id/emptyView_checkout"/>
+
+
+
+</RelativeLayout>

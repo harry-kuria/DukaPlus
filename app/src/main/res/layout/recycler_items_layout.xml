@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/qr_code"
+        android:text="Code"
+        android:textColor="#0000FF"
+        android:textAlignment="center"
+        android:textSize="@dimen/_20ssp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/item"
+        android:text="item"
+        android:textAlignment="center"
+        android:layout_toRightOf="@id/qr_code"
+        android:textSize="@dimen/_20ssp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:layout_marginLeft="@dimen/_5sdp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/quantity"
+        android:text="Quantity"
+        android:textColor="#800000"
+        android:textAlignment="center"
+        android:layout_toRightOf="@id/item"
+        android:textSize="@dimen/_20ssp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:layout_marginLeft="@dimen/_5sdp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/unit_price"
+        android:text="Unit price"
+        android:textColor="#FF00FF"
+        android:textAlignment="center"
+        android:layout_toRightOf="@id/quantity"
+        android:textSize="@dimen/_20ssp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:layout_marginLeft="@dimen/_5sdp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/total_price"
+        android:text="Total Price"
+        android:textColor="@color/colorAccent"
+        android:textAlignment="center"
+        android:layout_toRightOf="@id/unit_price"
+        android:textSize="@dimen/_20ssp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:layout_marginLeft="@dimen/_5sdp"/>
+
+
+</RelativeLayout>

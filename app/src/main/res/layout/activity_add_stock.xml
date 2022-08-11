@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddStockActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Add Stock"
+        android:id="@+id/add_stock_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="@dimen/_20sdp"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/add_stock_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_stock_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/button_border"
+        android:onClick="add_stock_button_Activity"
+        android:text="TAP TO ADD YOUR STOCK TO BELOW LIST"
+        android:textColor="#FA8072" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/add_stock_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:id="@+id/recyclerview"/>
+
+    <ImageView
+        android:layout_width="@dimen/_100sdp"
+        android:visibility="gone"
+        android:id="@+id/emptyView_image"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_above="@id/emptyView"
+        android:src="@drawable/ic_baseline_hourglass_empty_24"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:text="No Data Available"
+        android:textSize="@dimen/_20sdp"
+        android:textAlignment="center"
+        android:layout_centerInParent="true"
+        android:id="@+id/emptyView"/>
+
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+        android:id="@+id/add_item_options"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="@dimen/_10sdp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:hint="Code"
+                android:id="@+id/code_input"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:hint="Name of Commodity"
+                android:layout_below="@id/code_input"
+                android:id="@+id/name_input"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:hint="Quantity"
+                android:layout_below="@id/name_input"
+                android:id="@+id/quantity_input"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:hint="Unit_Price"
+                android:layout_below="@id/quantity_input"
+                android:id="@+id/unitprice_input"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/unitprice_input"
+                android:text="ADD TO LIST"
+                android:onClick="setAdd_stock_button"
+                android:id="@+id/add_to_stock"
+                android:textColor="#FA8072"
+                android:background="@drawable/button_border"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/unitprice_input"
+                android:text="SCAN AGAIN"
+                android:layout_alignParentRight="true"
+                android:onClick="setScan_again"
+                android:id="@+id/scan_again"
+                android:textColor="#FA8072"
+                android:background="@drawable/button_border"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

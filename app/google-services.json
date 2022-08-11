@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "721996520089",
+    "firebase_url": "https://dukaplus-16826.firebaseio.com",
+    "project_id": "dukaplus-16826",
+    "storage_bucket": "dukaplus-16826.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721996520089:android:bae998683e229a73d17608",
+        "android_client_info": {
+          "package_name": "ultramodern.activity.dukaplus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "721996520089-tbuv66qrta1rqlhbtbhoak7cbuk72m28.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUv08b1GQU7gb41Sl4dFOXWOSQRfzxfls"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "721996520089-tbuv66qrta1rqlhbtbhoak7cbuk72m28.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
